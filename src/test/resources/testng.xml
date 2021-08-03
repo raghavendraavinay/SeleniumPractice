@@ -1,0 +1,60 @@
+<suite name="Suite1" parallel="tests" thread-count="3">
+<!--    <listeners>-->
+<!--        <listener class-name="listeners.TestNGListener"/>-->
+<!--    </listeners>-->
+<!--    <test thread-count="5" name="TestOnChrome">-->
+<!--&lt;!&ndash;        <classes>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="listeners.ListenerDemo"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;            <class name="listeners.ListenerDemo2"></class>&ndash;&gt;-->
+<!--&lt;!&ndash;        </classes>&ndash;&gt;-->
+<!--&lt;!&ndash;        <packages>&ndash;&gt;-->
+<!--&lt;!&ndash;            <package name="listeners"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        </packages>&ndash;&gt;-->
+<!--        <parameters>-->
+<!--            <parameter name="browserName" value="chrome"/>-->
+<!--        </parameters>-->
+<!--        <classes>-->
+<!--            <class name="TestNG.TestNGMultiBrowserDemo"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test thread-count="5" name="TestOnFirefox">-->
+<!--        <parameters>-->
+<!--            <parameter name="browserName" value="firefox"/>-->
+<!--        </parameters>-->
+<!--        <classes>-->
+<!--            <class name="TestNG.TestNGMultiBrowserDemo"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test thread-count="5" name="TestOnEdge">-->
+<!--        <parameters>-->
+<!--            <parameter name="browserName" value="edge"/>-->
+<!--        </parameters>-->
+<!--        <classes>-->
+<!--            <class name="TestNG.TestNGMultiBrowserDemo"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test">-->
+<!--        <groups>-->
+<!--&lt;!&ndash;            <define name="regression">&ndash;&gt;-->
+<!--&lt;!&ndash;                <include name="sanity"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            </define>&ndash;&gt;-->
+<!--            <run>-->
+<!--&lt;!&ndash;                <include name="s.*"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                <include name="smoke"/>&ndash;&gt;-->
+<!--                <include name="AllTests"/>-->
+<!--            </run>-->
+<!--        </groups>-->
+<!--        <classes>-->
+<!--            <class name="TestNG.TestNGGroupDemo"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="test">
+        <parameters>
+            <parameter name="Name" value="Raghav"/>
+        </parameters>
+        <classes>
+            <class name="TestNG.TestNGParameterDemo"/>
+        </classes>
+    </test>
+
+</suite>
