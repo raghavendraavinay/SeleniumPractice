@@ -8,23 +8,38 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class ChromeHeadLessDemo {
 
     @Test
-    public void headless() throws InterruptedException {
+    public void headless() throws InterruptedException, IOException {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);
         WebDriver driver = new ChromeDriver(options);
 
         driver.get("https://google.co.in");
+        Actions actions = new Actions(driver);
+        actions.contextClick(driver.findElement(By.linkText(""))).perform();
+
+//        actions.dragAndDrop().build().perform();
+
+//        TakesScreenshot screenshot = (TakesScreenshot)driver;
+//        File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+//        File desFile = new File("src/test/resources/screenshot.jpg");
+//        FileUtils.copyFile(srcFile,desFile);
+
+
+
+
         driver.findElement(By.name("q")).sendKeys("Automation");
         driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         driver.findElement(By.linkText("2")).click();
